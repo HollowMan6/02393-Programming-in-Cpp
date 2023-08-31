@@ -14,8 +14,7 @@ int main() {
         }
 
         if (value >= 1 && value <= maxValue) {
-            std::cout << value << " was given " << count[value]
-                      << " times before" << std::endl;
+            std::cout << count[value] << std::endl;
             count[value]++;
         }
     }
