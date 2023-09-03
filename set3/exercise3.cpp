@@ -33,10 +33,16 @@ int main() {
 
             if (page >= 1 && page <= maxPages) {
                 Contact& contact = addressBook[page - 1];
-                cin >> contact.firstName >> contact.middleName >>
+                if (!contact.firstName.empty()) {
+                    string dummy;
+                    cin >> dummy >> dummy >> dummy >> dummy >> dummy >> dummy
+                        >> dummy >> dummy;
+                } else {
+                    cin >> contact.firstName >> contact.middleName >>
                     contact.lastName >> contact.phoneNumber >>
                     contact.streetAddress >> contact.houseNumber >>
                     contact.zipCode >> contact.region;
+                }
             }
         } else if (command == "clr") {
             int page;
@@ -62,6 +68,6 @@ int main() {
 }
 
 // add 1 John B. Doe 12345678 Richard_Petersen_Plads 321 2800 Hovedstaden
-// add 2 Jane A. Wolford 98765432 Fredrik_Bajers_Vej 7 9220 Nordjylland
-// qry 1 qry 2
+// add 1 Jane A. Wolford 98765432 Fredrik_Bajers_Vej 7 9220 Nordjylland
+// qry 1
 // quit
