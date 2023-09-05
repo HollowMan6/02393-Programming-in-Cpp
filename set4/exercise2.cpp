@@ -41,7 +41,7 @@ int main() {
             playground[i][j].x = j;
             playground[i][j].y = i;
             playground[i][j].isWall = (j == 0 || i == (n - 1) ||
-                                       (i == 0 && j != m / 3) || j == (m - 1));
+                                       (i == 0 && j != 3) || j == (m - 1));
             if (playground[i][j].isWall) {
                 playground[i][j].type = stone;
             } else {
