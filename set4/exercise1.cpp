@@ -46,6 +46,7 @@ int main() {
     }
 
     char command;
+    displayPlayground(playground, x, y);
     while (cin >> command && command != 'q') {
         int newX = x, newY = y;
         if (command == 'l' && x > 0 && !playground[y][x - 1].isWall) {
